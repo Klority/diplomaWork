@@ -1,0 +1,38 @@
+@import "./variables.scss";
+
+.listing-card {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: black;
+
+  &:hover {
+    @include shadow;
+  }
+
+  .slider-container {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,159 @@
+
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+
+.win{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include lg {
+      width: 60%;
+    }
+
+    @include mm {
+      width: 80%;
+    }
+
+
+
+    button {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 15px;
+      @include buttonStyle;
+      width: 60%;
+      margin: 0 auto;
+      align-items: center;
+     
+      &:hover {
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255);
+      }
+    }
+}
+
+h2{
+  color: $blue;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p{
+  color: $blue;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.chat-form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+
+
+button {
+  margin-top: 15px;
+  @include buttonStyle;
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
+
+
+  &:hover {
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255);
+  }
+}
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 15px;
+    width: 80%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+
+    @include lg {
+      width: 60%;
+    }
+
+    @include mm {
+      width: 80%;
+    }
+
+    .question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+
+      label {
+        flex: 1;
+        margin-right: 10px;
+        color: white;
+        font-size: 16px;
+      }
+
+      select {
+        flex: 1;
+        padding: 7px 15px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        outline: none;
+        text-align: center;
+        color: black;
+
+        &::placeholder {
+          color: black;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      margin-top: 15px;
+      @include buttonStyle;
+      width: 50%;
+      margin: 0 auto;
+      align-items: center;
+
+      &:hover {
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255);
+      }
+    }
+  }
+
+  button[type="button"] {
+    margin-top: 15px;
+    @include buttonStyle;
+
+    &:hover {
+      box-shadow: 0 0 10px 3px rgba(255, 255, 255);
+    }
+  }
+}
+
+
+
+
+.response-frame{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+
+  text-align: left;
+  margin: 0 auto;
+  background-color:$grey;
+  border-radius: 10px;
+  padding:15px 15px;
+  margin-bottom: 20px;
+}
